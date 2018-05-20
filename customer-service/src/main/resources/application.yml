@@ -1,9 +1,9 @@
 spring:
   application:
-    name: order-service
+    name: customer-service
 
 server:
-  port: 8091
+  port: 8093
 
 eureka:
   client:

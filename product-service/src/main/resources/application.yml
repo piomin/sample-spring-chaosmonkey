@@ -9,3 +9,14 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8061/eureka/
+      
+chaos:
+  monkey:
+    assaults:
+      level: 8
+      latencyRangeStart: 1000
+      latencyRangeEnd: 10000
+      exceptionsActive: true
+      killApplicationActive: true
+    watcher:
+      repository: true
