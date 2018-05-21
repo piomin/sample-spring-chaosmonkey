@@ -1,7 +1,12 @@
 package pl.piomin.services.order.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Order {
 
+	@Id
 	private Integer id;
 	private Integer productId;
 	private Integer customerId;

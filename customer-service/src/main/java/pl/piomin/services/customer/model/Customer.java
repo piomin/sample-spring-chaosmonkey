@@ -1,7 +1,12 @@
 package pl.piomin.services.customer.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
 
+	@Id
 	private Integer id;
 	private String name;
 	private int availableFunds;

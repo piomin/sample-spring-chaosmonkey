@@ -1,7 +1,12 @@
 package pl.piomin.services.product.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
 
+	@Id
 	private Integer id;
 	private String name;
 	private int count;

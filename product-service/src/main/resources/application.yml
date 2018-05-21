@@ -1,7 +1,15 @@
 spring:
   application:
     name: product-service
-
+  datasource:
+    url: jdbc:mysql://192.168.99.100:33306/chaos?useSSL=false
+    username: chaos
+    password: chaos123
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      
 server:
   port: 8092
 

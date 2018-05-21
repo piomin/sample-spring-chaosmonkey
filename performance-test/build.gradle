@@ -1,0 +1,24 @@
+apply plugin: 'java-library'
+apply plugin: 'scala'
+
+dependencies {
+    testCompile group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '2.3.0'
+}
+
+task loadTest(type: JavaExec) {
+   dependsOn testClasses
+   description = "Load Test With Gatling"
+   group = "Load Test"
+   classpath = sourceSets.test.runtimeClasspath
+   jvmArgs = [
+        "-Dgatling.core.directory.binaries=${sourceSets.test.output.classesDir.toString()}"
+   ]
+   main = "io.gatling.app.Gatling"
+   args = [
+           "--simulation", "pl.piomin.services.gatling.ApiGatlingSimulationTest",
+           "--results-folder", "${buildDir}/gatling-results",
+           "--binaries-folder", sourceSets.test.output.classesDir.toString(),
+           "--bodies-folder", sourceSets.test.resources.srcDirs.toList().first().toString() + "/gatling/bodies",
+   ]
+}
+

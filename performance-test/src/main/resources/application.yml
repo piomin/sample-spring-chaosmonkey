@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gatling-service
+  datasource:
+    url: jdbc:postgresql://192.168.99.100:5432/gatling
+    username: gatling
+    password: gatling123
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+            
+server:
+  port: 8090
