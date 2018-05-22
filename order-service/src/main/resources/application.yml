@@ -26,7 +26,7 @@ chaos:
   monkey:
     enabled: true
     assaults:
-      level: 8
+      level: 3
       latencyRangeStart: 1000
       latencyRangeEnd: 10000
       exceptionsActive: true
