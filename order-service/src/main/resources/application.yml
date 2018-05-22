@@ -17,7 +17,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-      
+
+logging:
+  level:
+    de.codecentric: TRACE
+         
 chaos:
   monkey:
     enabled: true
