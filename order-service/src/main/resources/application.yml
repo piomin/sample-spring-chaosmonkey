@@ -16,10 +16,11 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: http://localhost:8761/eureka/
       
 chaos:
   monkey:
+    enabled: true
     assaults:
       level: 8
       latencyRangeStart: 1000

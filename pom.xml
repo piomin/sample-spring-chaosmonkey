@@ -11,6 +11,7 @@
 		<module>product-service</module>
 		<module>customer-service</module>
 		<module>discovery-service</module>
+		<module>gateway-service</module>
 	</modules>
 	
 </project>
