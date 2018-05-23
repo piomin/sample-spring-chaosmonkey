@@ -21,15 +21,29 @@ eureka:
 logging:
   level:
     de.codecentric: TRACE
-         
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+  hystrix:
+    enabled: false
+
+ribbon:
+  ConnectTimeout: 5000
+  ReadTimeout: 5000
+                   
 chaos:
   monkey:
     enabled: true
     assaults:
-      level: 3
+      level: 8
       latencyRangeStart: 1000
       latencyRangeEnd: 10000
-      exceptionsActive: true
+      exceptionsActive: false
       killApplicationActive: true
     watcher:
       repository: true

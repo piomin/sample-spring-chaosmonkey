@@ -10,3 +10,19 @@ eureka:
     registerWithEureka: false
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+      
+ribbon:
+  ConnectTimeout: 5000
+  ReadTimeout: 5000
+  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation: 
+          thread:
+            timeoutInMilliseconds: 15000
+      fallback:
+        enabled: false
+      circuitBreaker:
+        enabled: false

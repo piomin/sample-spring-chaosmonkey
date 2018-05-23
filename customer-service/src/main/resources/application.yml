@@ -22,13 +22,14 @@ chaos:
   monkey:
     enabled: true
     assaults:
-      level: 3
+      level: 8
       latencyRangeStart: 1000
       latencyRangeEnd: 10000
-      exceptionsActive: true
+      exceptionsActive: false
       killApplicationActive: true
     watcher:
       repository: true
+      restController: true
       
 management:
   endpoint:
