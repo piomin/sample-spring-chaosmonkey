@@ -2,7 +2,7 @@ spring:
   application:
     name: customer-service
   datasource:
-    url: jdbc:mysql://192.168.99.100:33306/chaos?useSSL=false
+    url: jdbc:mysql://localhost:3306/chaos?useSSL=false
     username: chaos
     password: chaos123
     driverClassName: com.mysql.jdbc.Driver
