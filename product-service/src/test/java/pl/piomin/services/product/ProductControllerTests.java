@@ -1,6 +1,9 @@
 package pl.piomin.services.product;
 
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -17,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Testcontainers
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ProductControllerTests {
 
     protected Logger logger = Logger.getLogger(ProductControllerTests.class.getName());
@@ -32,6 +36,7 @@ public class ProductControllerTests {
             .withPassword("chaos123");
 
     @Test
+    @Order(1)
     void addProduct() {
         Product p = new Product();
         p.setName("Test");
@@ -45,6 +50,7 @@ public class ProductControllerTests {
     }
 
     @Test
+    @Order(2)
     void findProductById() {
         Product p = restTemplate.getForObject("/products/{id}", Product.class, id);
         assertNotNull(p);

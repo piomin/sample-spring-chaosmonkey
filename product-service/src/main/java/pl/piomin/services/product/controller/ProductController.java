@@ -33,7 +33,7 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public Product findById(@PathVariable("id") Integer id) {
-        return repository.findById(id).get();
+        return repository.findById(id).orElse(null);
     }
 
     @GetMapping
