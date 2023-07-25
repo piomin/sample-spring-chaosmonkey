@@ -18,27 +18,27 @@ import pl.piomin.services.product.repository.ProductRepository;
 @RequestMapping("/products")
 public class ProductController {
 
-	@Autowired
-	ProductRepository repository;
-	
-	@PostMapping
-	public Product add(@RequestBody Product product) {
-		return repository.save(product);
-	}
-	
-	@PutMapping
-	public Product update(@RequestBody Product product) {
-		return repository.save(product);
-	}
-	
-	@GetMapping("/{id}")
-	public Product findById(@PathVariable("id") Integer id) {
-		return repository.findById(id).get();
-	}
-	
-	@GetMapping
-	public Iterable<Product> findAll() {
-		return repository.findAll();
-	}
-	
+    @Autowired
+    ProductRepository repository;
+
+    @PostMapping
+    public Product add(@RequestBody Product product) {
+        return repository.save(product);
+    }
+
+    @PutMapping
+    public Product update(@RequestBody Product product) {
+        return repository.save(product);
+    }
+
+    @GetMapping("/{id}")
+    public Product findById(@PathVariable("id") Integer id) {
+        return repository.findById(id).get();
+    }
+
+    @GetMapping
+    public Iterable<Product> findAll() {
+        return repository.findAll();
+    }
+
 }

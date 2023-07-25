@@ -1,6 +1,6 @@
 package pl.piomin.services.gateway;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -18,14 +18,14 @@ public class AddTestData {
 	
 	@Test
 	public void addTestCustomers() {
-		for (int i = 0; i < 10; i++) {
-			Customer c = new Customer();
-			c.setAvailableFunds(50000);
-			c.setName("Test Test" + i);
-			c.setType(CustomerType.NORMAL);
-			c = rest.postForObject("http://localhost:8090/customer-service/customers", c, Customer.class);
-			LOGGER.info("New customer: id={}", c.getId());
-		}
+//		for (int i = 0; i < 10; i++) {
+//			Customer c = new Customer();
+//			c.setAvailableFunds(50000);
+//			c.setName("Test Test" + i);
+//			c.setType(CustomerType.NORMAL);
+//			c = rest.postForObject("http://localhost:8090/customer-service/customers", c, Customer.class);
+//			LOGGER.info("New customer: id={}", c.getId());
+//		}
 	}
 	
 //	@Test

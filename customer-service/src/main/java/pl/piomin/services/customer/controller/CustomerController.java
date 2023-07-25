@@ -16,22 +16,22 @@ import pl.piomin.services.customer.repository.CustomerRepository;
 @RequestMapping("/customers")
 public class CustomerController {
 
-	@Autowired
-	CustomerRepository repository;
-	
-	@PostMapping
-	public Customer add(@RequestBody Customer customer) {
-		return repository.save(customer);
-	}
-	
-	@PutMapping
-	public Customer update(@RequestBody Customer customer) {
-		return repository.save(customer);
-	}
-	
-	@GetMapping("/{id}")
-	public Customer findById(@PathVariable("id") Integer id) {
-		return repository.findById(id).get();
-	}
-	
+    @Autowired
+    CustomerRepository repository;
+
+    @PostMapping
+    public Customer add(@RequestBody Customer customer) {
+        return repository.save(customer);
+    }
+
+    @PutMapping
+    public Customer update(@RequestBody Customer customer) {
+        return repository.save(customer);
+    }
+
+    @GetMapping("/{id}")
+    public Customer findById(@PathVariable("id") Integer id) {
+        return repository.findById(id).orElse(null);
+    }
+
 }
