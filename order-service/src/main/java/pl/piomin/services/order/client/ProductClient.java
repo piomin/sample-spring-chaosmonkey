@@ -11,10 +11,10 @@ import pl.piomin.services.order.model.Product;
 @FeignClient(name = "product-service")
 public interface ProductClient {
 
-	@PutMapping("/products")
-	Product update(@RequestBody Product product);
-	
-	@GetMapping("/products/{id}")
-	Product findById(@PathVariable("id") Integer id);
-	
+    @PutMapping("/products")
+    Product update(@RequestBody Product product);
+
+    @GetMapping("/products/{id}")
+    Product findById(@PathVariable("id") Integer id);
+
 }

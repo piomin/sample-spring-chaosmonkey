@@ -1,15 +1,12 @@
 package pl.piomin.services.product.repository;
 
-import java.util.List;
-
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
-
 import pl.piomin.services.product.model.Product;
 
-@Repository
+import java.util.List;
+
 public interface ProductRepository extends CrudRepository<Product, Integer> {
 
-	List<Product> findByName(String name);
-	
+    List<Product> findByName(String name);
+
 }

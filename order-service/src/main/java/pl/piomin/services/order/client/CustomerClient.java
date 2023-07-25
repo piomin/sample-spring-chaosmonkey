@@ -11,9 +11,10 @@ import pl.piomin.services.order.model.Customer;
 @FeignClient(name = "customer-service")
 public interface CustomerClient {
 
-	@GetMapping("/customers/{id}")
-	public Customer findById(@PathVariable("id") Integer id);
-	@PutMapping("/customers")
-	public Customer update(@RequestBody Customer customer);
-	
+    @GetMapping("/customers/{id}")
+    public Customer findById(@PathVariable("id") Integer id);
+
+    @PutMapping("/customers")
+    public Customer update(@RequestBody Customer customer);
+
 }

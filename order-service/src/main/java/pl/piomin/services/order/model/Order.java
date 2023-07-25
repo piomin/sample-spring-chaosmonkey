@@ -12,81 +12,81 @@ import org.springframework.data.annotation.Transient;
 @Table(name = "orderx")
 public class Order {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	private Integer productId;
-	private Integer customerId;
-	private int productsCount;
-	private int price;
-	private OrderStatus status;
-	@Transient
-	private String customerName;
-	@Transient
-	private String productName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private Integer productId;
+    private Integer customerId;
+    private int productsCount;
+    private int price;
+    private OrderStatus status;
+    @Transient
+    private String customerName;
+    @Transient
+    private String productName;
 
-	public Integer getId() {
-		return id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public Integer getProductId() {
-		return productId;
-	}
+    public Integer getProductId() {
+        return productId;
+    }
 
-	public void setProductId(Integer productId) {
-		this.productId = productId;
-	}
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
 
-	public Integer getCustomerId() {
-		return customerId;
-	}
+    public Integer getCustomerId() {
+        return customerId;
+    }
 
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
-	}
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
+    }
 
-	public int getProductsCount() {
-		return productsCount;
-	}
+    public int getProductsCount() {
+        return productsCount;
+    }
 
-	public void setProductsCount(int productsCount) {
-		this.productsCount = productsCount;
-	}
+    public void setProductsCount(int productsCount) {
+        this.productsCount = productsCount;
+    }
 
-	public int getPrice() {
-		return price;
-	}
+    public int getPrice() {
+        return price;
+    }
 
-	public void setPrice(int price) {
-		this.price = price;
-	}
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
-	public OrderStatus getStatus() {
-		return status;
-	}
+    public OrderStatus getStatus() {
+        return status;
+    }
 
-	public void setStatus(OrderStatus status) {
-		this.status = status;
-	}
+    public void setStatus(OrderStatus status) {
+        this.status = status;
+    }
 
-	public String getCustomerName() {
-		return customerName;
-	}
+    public String getCustomerName() {
+        return customerName;
+    }
 
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
 
-	public String getProductName() {
-		return productName;
-	}
+    public String getProductName() {
+        return productName;
+    }
 
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
 }
