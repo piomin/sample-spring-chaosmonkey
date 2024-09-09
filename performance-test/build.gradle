@@ -2,7 +2,7 @@ apply plugin: 'java-library'
 apply plugin: 'scala'
 
 dependencies {
-    testCompile group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '3.11.5'
+    testCompile group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '3.12.0'
 }
 
 task loadTest(type: JavaExec) {
