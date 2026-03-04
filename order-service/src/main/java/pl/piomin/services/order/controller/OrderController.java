@@ -49,7 +49,7 @@ public class OrderController {
     }
 
     @GetMapping("/{id}")
-    public Order findById(@PathVariable("id") Integer id) {
+    public Order findById(@PathVariable Integer id) {
         Optional<Order> order = repository.findById(id);
         if (order.isPresent()) {
             Order o = order.get();
