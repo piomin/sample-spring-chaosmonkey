@@ -3,10 +3,7 @@ package pl.piomin.services.gateway;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-
-import pl.piomin.services.gateway.model.Customer;
-import pl.piomin.services.gateway.model.CustomerType;
+import org.springframework.boot.resttestclient.TestRestTemplate;
 import pl.piomin.services.gateway.model.Product;
 import pl.piomin.services.gateway.model.ProductCategory;
 
@@ -14,7 +11,7 @@ public class AddTestData {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(AddTestData.class);
 	
-	TestRestTemplate rest = new TestRestTemplate(); 
+	TestRestTemplate rest = new TestRestTemplate();
 	
 	@Test
 	public void addTestCustomers() {
